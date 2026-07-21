@@ -3,3 +3,6 @@ import json
 def load_raw_data(data, file_path):
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
+
+def load_processed_data(df, file_path):
+    df.to_parquet(file_path)
