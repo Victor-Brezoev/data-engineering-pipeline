@@ -1,9 +1,10 @@
 from extract import extract_data
+from load import load_raw_data
 
 def main():
     users = extract_data()
-    print(f"extract {len(users)} users")
-    print(users[0])
+    load_raw_data(users, "data/raw/users.json")
+    print("data loaded")
 
 
 if __name__=="__main__":
